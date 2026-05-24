@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>From Skies to Systems | Jhuniya Rizza Viernes Atieh</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #080d16;
+      color: #f5f7fb;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at top left, rgba(0, 174, 255, 0.24), transparent 28%),
+        radial-gradient(circle at center right, rgba(79, 70, 229, 0.20), transparent 32%),
+        #080d16;
+    }
+
+    header {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 28px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      font-size: 1.1rem;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      color: #b8c4d8;
+      font-size: 0.95rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #ffffff;
+    }
+
+    .journey-hero {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 76px 24px 42px;
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 42px;
+      align-items: center;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 8px 14px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 999px;
+      color: #a9d7ff;
+      background: rgba(255, 255, 255, 0.04);
+      margin-bottom: 22px;
+      font-size: 0.9rem;
+    }
+
+    h1 {
+      font-size: clamp(2.6rem, 6vw, 5rem);
+      line-height: 1.02;
+      margin-bottom: 24px;
+      letter-spacing: -2px;
+    }
+
+    h1 span,
+    .highlight {
+      color: #6bdcff;
+    }
+
+    .lead {
+      color: #c3ccda;
+      font-size: 1.08rem;
+      max-width: 680px;
+      margin-bottom: 20px;
+    }
+
+    .quote-card {
+      padding: 28px;
+      border-radius: 28px;
+      background: rgba(255, 255, 255, 0.065);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.3);
+    }
+
+    .quote-card img {
+      width: 100%;
+      border-radius: 22px;
+      margin-bottom: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .quote-card h2 {
+      margin-bottom: 10px;
+    }
+
+    .quote-card p {
+      color: #bac6d8;
+      font-size: 0.96rem;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 54px 24px;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 14px;
+    }
+
+    .section-intro {
+      color: #c3ccda;
+      max-width: 790px;
+      margin-bottom: 28px;
+    }
+
+    .country-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .region-card,
+    .lesson-card,
+    .story-card {
+      padding: 24px;
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.055);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .region-card h3,
+    .lesson-card h3,
+    .story-card h3 {
+      margin-bottom: 12px;
+      color: #ffffff;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .chip {
+      display: inline-block;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(107, 220, 255, 0.10);
+      border: 1px solid rgba(107, 220, 255, 0.26);
+      color: #dff7ff;
+      font-size: 0.9rem;
+    }
+
+    .lesson-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .lesson-card p,
+    .story-card p {
+      color: #bbc7d8;
+      font-size: 0.96rem;
+    }
+
+    .story-card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .story-card p {
+      margin-bottom: 14px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 12px;
+      font-weight: 700;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+    }
+
+    .primary {
+      background: #6bdcff;
+      color: #06111c;
+      border: none;
+    }
+
+    .secondary {
+      color: #e8edf5;
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .closing {
+      text-align: center;
+      padding-bottom: 78px;
+    }
+
+    .closing p {
+      color: #c3ccda;
+      max-width: 760px;
+      margin: 0 auto 24px;
+      font-size: 1.1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 36px 24px;
+      color: #94a3b8;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    @media (max-width: 900px) {
+      .journey-hero,
+      .story-card {
+        grid-template-columns: 1fr;
+      }
+
+      .country-grid,
+      .lesson-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 620px) {
+      header {
+        flex-direction: column;
+        gap: 18px;
+      }
+
+      .country-grid,
+      .lesson-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .journey-hero {
+        padding-top: 42px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <a class="logo" href="index.html">JRizzaVA</a>
+      <nav>
+        <a href="index.html#about">About</a>
+        <a class="active" href="journey.html">Journey</a>
+        <a href="index.html#skills">Skills</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="journey-hero">
+        <div>
+          <div class="tag">Aviation Chapter • From Skies to Systems</div>
+          <h1>From <span>skies</span> to systems.</h1>
+          <p class="lead">
+            Before I started building software, I spent years navigating people, cultures, and high-pressure situations across the world.
+          </p>
+          <p class="lead">
+            This page is a dedication to my flight attendant journey — the chapter that shaped my confidence, communication, leadership, and the way I solve problems today.
+          </p>
+          <a class="button primary" href="index.html#projects">See My Tech Projects</a>
+        </div>
+
+        <div class="quote-card">
+          <img src="profile.jpeg" alt="Cartoon portrait of Jhuniya" />
+          <h2>Different uniform, same mindset.</h2>
+          <p>
+            Aviation taught me how to stay calm, pay attention to details, support people, and make decisions when situations change quickly. I now carry those same skills into software engineering, cybersecurity, and cloud technology.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="section-title">Countries I’ve Experienced</h2>
+        <p class="section-intro">
+          These places represent more than travel. They remind me of different passengers, crews, cultures, and lessons collected throughout my aviation career.
+        </p>
+
+        <div class="country-grid">
+          <div class="region-card">
+            <h3>Middle East</h3>
+            <div class="chips">
+              <span class="chip">Kuwait</span>
+              <span class="chip">Qatar</span>
+              <span class="chip">UAE</span>
+              <span class="chip">Saudi Arabia</span>
+            </div>
+          </div>
+
+          <div class="region-card">
+            <h3>Asia</h3>
+            <div class="chips">
+              <span class="chip">Philippines</span>
+              <span class="chip">Thailand</span>
+              <span class="chip">Singapore</span>
+              <span class="chip">Malaysia</span>
+              <span class="chip">Japan</span>
+            </div>
+          </div>
+
+          <div class="region-card">
+            <h3>Oceania</h3>
+            <div class="chips">
+              <span class="chip">Australia</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="section-title">What Aviation Taught Me</h2>
+        <p class="section-intro">
+          My aviation background may look different from software engineering, but the core skills still matter: discipline, communication, adaptability, and problem-solving.
+        </p>
+
+        <div class="lesson-grid">
+          <div class="lesson-card">
+            <h3>Communication</h3>
+            <p>Working with passengers and crew from different backgrounds taught me how to listen, explain clearly, and stay professional.</p>
+          </div>
+
+          <div class="lesson-card">
+            <h3>Leadership</h3>
+            <p>As senior cabin crew, I learned how to guide a team, support others, and take responsibility when decisions mattered.</p>
+          </div>
+
+          <div class="lesson-card">
+            <h3>Adaptability</h3>
+            <p>Every flight was different. Aviation trained me to adjust quickly when plans, people, or situations changed.</p>
+          </div>
+
+          <div class="lesson-card">
+            <h3>Problem Solving</h3>
+            <p>From delays to passenger concerns, I learned how to stay calm, think fast, and choose practical solutions.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="story-card">
+          <div>
+            <h2 class="section-title">How It Connects to Tech</h2>
+            <p>
+              Software engineering is not only about code. It is also about understanding people, building reliable systems, and solving real problems with care and structure.
+            </p>
+            <p>
+              My aviation experience helped me become detail-oriented, patient, safety-aware, and resilient. These are the same qualities I now bring into programming, cybersecurity, and cloud engineering.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="highlight">The bridge between both worlds</h3>
+            <p>
+              In aviation, I learned how to follow procedures, respond to unexpected issues, and protect people. In tech, I am learning how to design, build, and secure systems with the same sense of responsibility.
+            </p>
+            <p>
+              This journey is not about starting over. It is about carrying everything I learned forward into a new future.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="closing">
+        <p>
+          I may have changed paths, but I still carry the same mindset: stay curious, stay calm, and keep moving forward.
+        </p>
+        <a class="button secondary" href="index.html">Back to Home</a>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 Jhuniya Rizza Viernes. Built with HTML, CSS, and a journey from skies to systems.</p>
+    </footer>
+  </div>
+</body>
+</html>
